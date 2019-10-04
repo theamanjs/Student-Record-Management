@@ -271,6 +271,7 @@ require './includes/footer.php';
                                 fetchSubjects: true
                             },
                             success: function(response) {
+                                console.log(response);
                                 $("#subjectList").html(response);
                                 for (let option in $("#subjectList")[0].options) {
                                     if (option != "length") {
@@ -322,6 +323,7 @@ require './includes/footer.php';
             }
 
             function setDefaultTeacher() {
+                if( $("#subjectList")[0].selectedOptions.length === 0 ) return;
                 let teacherCode = $("#subjectList")[0].selectedOptions[0].getAttribute("teacher-code");
                 for (let i = 0; i < $("#teacherList")[0].length; i++) {
                     if (teacherCode == $("#teacherList")[0].options[i].value) {
