@@ -798,7 +798,7 @@ if(isset($_POST['addAssignment'])) {
     if($result){
         echo "true";
     }
-    echo $query;
+    // echo $query;
     // print_r($_POST);
         // print_r($_FILES);
 

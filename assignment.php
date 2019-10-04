@@ -269,7 +269,7 @@ include("./loader.php");
                 let data = new FormData($("#addAssignmentForm")[0]);
                 data.append("department", "<?php echo $teacherData['department'] ?>" );
                 data.append("addAssignment", true);
-                console.log(data);
+                // console.log(data);
                 $.ajax({
                     url: "data-manipulation.php",
                     type: "POST",
@@ -277,7 +277,7 @@ include("./loader.php");
                     contentType: false,
                     processData: false,
                     success: function(response) {
-						console.log(response); return;
+						// console.log(response); return;
                         $('.modal').modal('hide');
                         fetchAssignments();
                         if (response == "true") {
@@ -314,7 +314,7 @@ include("./loader.php");
                             $('#loadMoreButton').remove();
                         }
                         for (let i = init; i <= countLength; i++) {
-							console.log(assignmentArray);
+							// console.log(assignmentArray);
                             assignments += `<div class="card card-collapse">
                                         <div class="card-header" role="tab" id="heading${i}">
                                           <h5 class="mb-0">
