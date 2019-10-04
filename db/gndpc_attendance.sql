@@ -3048,7 +3048,56 @@ ALTER TABLE `subjects`
 ALTER TABLE `teacher_list`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 COMMIT;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `timings`
+--
+
+CREATE TABLE `timings` (
+  `id` int(11) NOT NULL,
+  `lecture` int(11) NOT NULL,
+  `time_from` time NOT NULL,
+  `time_to` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `timings`
+--
+
+INSERT INTO `timings` (`id`, `lecture`, `time_from`, `time_to`) VALUES
+(1, 1, '08:30:00', '09:30:00'),
+(2, 2, '09:31:00', '10:30:00'),
+(3, 3, '10:31:00', '11:30:00'),
+(4, 4, '11:31:00', '12:30:00'),
+(5, 0, '12:31:00', '13:30:00'),
+(6, 5, '13:31:00', '14:30:00'),
+(7, 6, '14:31:00', '15:15:00'),
+(8, 7, '15:16:00', '16:00:00'),
+(9, 8, '16:01:00', '16:30:00');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `timings`
+--
+ALTER TABLE `timings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `timings`
+--
+ALTER TABLE `timings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
