@@ -40,7 +40,7 @@ if (isset($_POST['loginSubmit'])) {
             $_SESSION['Username'] = $_POST['Username'];
             $_SESSION['userActive'] = true;
             $_SESSION['userType'] = "Student";
-            echo "student-dashboard.php";
+            echo "student-class.php";
         } else {
             echo "false";
         }
