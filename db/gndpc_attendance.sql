@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 04, 2019 at 11:38 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 7.2.3
+-- Generation Time: Oct 03, 2019 at 05:48 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `gndpc_attendance`
 --
+CREATE DATABASE IF NOT EXISTS `gndpc_attendance` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `gndpc_attendance`;
 
 -- --------------------------------------------------------
 
@@ -128,6 +130,23 @@ INSERT INTO `ae_timetable` (`id`, `semester`, `day`, `section`, `lecture_1`, `le
 (28, 2, 'thursday', 'K', '6753:surin5260', '6753:surin5260', '6753:surin5260', '553:chara3712', '2853:avtar5195', '453:harji6837', '4553:savit4914', '2853:avtar5195'),
 (29, 2, 'friday', 'J', '2753:jaspa8301', '2953:amand1258', '2953:amand1258', '2953:amand1258', '2753:jaspa8301', '553:chara3712', '2853:avtar5195', '9999:sukhd8732'),
 (30, 2, 'friday', 'K', '2753:jaspa8301', '2953:amand1258', '2953:amand1258', '2953:amand1258', '2753:jaspa8301', '553:chara3712', '2853:avtar5195', '9999:sukhd8732');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `assignments`
+--
+
+CREATE TABLE `assignments` (
+  `id` int(11) NOT NULL,
+  `number` text NOT NULL,
+  `submission_date` date NOT NULL,
+  `text` varchar(500) NOT NULL,
+  `doc` text NOT NULL,
+  `semester` int(5) NOT NULL,
+  `subject` varchar(99) NOT NULL,
+  `department` varchar(99) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -803,324 +822,6 @@ CREATE TABLE `log` (
   `info` varchar(100) NOT NULL,
   `department` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `log`
---
-
-INSERT INTO `log` (`sno`, `date`, `time`, `teachercode`, `info`, `department`) VALUES
-(1, '01/03/2019', '11:27:09 AM', 'ashok421', 'Attendance Entered.', 'me'),
-(2, '01/03/2019', '11:28:32 AM', 'ashok421', 'Attendance Entered.', 'me'),
-(3, '01/03/2019', '11:29:20 AM', 'ashok421', 'Attendance Entered.', 'me'),
-(4, '03/03/2019', '03:39:24 PM', 'amrit941', 'Timetable Update:1 Set to 5258:raman1676 ', 'ee'),
-(5, '03/03/2019', '03:41:28 PM', 'amrit941', 'Timetable Update:1 Set to 5258 ', 'ee'),
-(6, '03/03/2019', '04:26:12 PM', 'amrit941', 'Timetable Update:BM Set to 6666 ', 'ee'),
-(7, '03/03/2019', '04:26:18 PM', 'amrit941', 'Timetable Update:MET Set to 5235 ', 'ee'),
-(8, '03/03/2019', '04:47:06 PM', 'amrit941', 'Timetable Update:BM Set to ', 'ee'),
-(9, '03/03/2019', '04:48:54 PM', 'amrit941', 'Timetable Update:MET Set to ', 'ee'),
-(10, '03/03/2019', '04:49:18 PM', 'amrit941', 'Timetable Update:BM Set to jasvi3358', 'ee'),
-(11, '03/03/2019', '04:49:25 PM', 'amrit941', 'Timetable Update:MET Set to gurin5176', 'ee'),
-(12, '03/03/2019', '05:02:51 PM', 'amrit941', 'Timetable Update:BM Set to BM', 'ee'),
-(13, '03/03/2019', '05:02:58 PM', 'amrit941', 'Timetable Update:MET Set to MET', 'ee'),
-(14, '03/03/2019', '05:03:41 PM', 'amrit941', 'Timetable Update:POW Set to POW', 'ee'),
-(15, '03/03/2019', '05:07:26 PM', 'amrit941', 'Timetable Update:MET Set to MET', 'ee'),
-(16, '03/03/2019', '05:09:52 PM', 'amrit941', 'Timetable Update:POW Set to POW on lecture:1 of friday', 'ee'),
-(17, '03/03/2019', '05:11:13 PM', 'amrit941', 'Timetable Update:MET Set to MET on lecture:1 of friday of semester:6', 'ee'),
-(18, '03/03/2019', '05:19:18 PM', 'amrit941', 'Timetable Update:BM Set to BM on lecture:1 of friday of semester:6', 'ee'),
-(19, '05/03/2019', '11:05:04 AM', 'sonia453', 'Attendance Entered.', 'cse'),
-(20, '05/03/2019', '12:37:19 PM', 'sanjeev344', 'Attendance Entered.', 'cse'),
-(21, '05/03/2019', '04:03:23 PM', 'sanjeev344', 'Attendance Entered.', 'cse'),
-(22, '05/03/2019', '04:03:49 PM', 'sanjeev344', 'Attendance Entered.', 'cse'),
-(23, '05/03/2019', '06:15:12 PM', 'sanjeev344', 'Attendance Entered.', 'cse'),
-(24, '06/03/2019', '06:54:39 AM', 'hardeep581', 'Attendance Entered.', 'cse'),
-(25, '06/03/2019', '07:19:58 AM', 'aman541', 'Attendance Entered.', 'cse'),
-(26, '07/03/2019', '08:00:48 AM', '', 'Timetable Update: Set to  on lecture: of  of semester:6', 'cse'),
-(27, '07/03/2019', '08:02:04 AM', '', 'Timetable Update:CG Set to BOM on lecture:1 of friday of semester:6', 'cse'),
-(28, '07/03/2019', '08:02:10 AM', '', 'Timetable Update:BOM Set to CG on lecture:1 of friday of semester:6', 'cse'),
-(29, '08/03/2019', '10:45:20 AM', '', '\'CC\' subject added!', 'cse'),
-(30, '08/03/2019', '10:47:19 AM', '', 'Student Retain', ''),
-(31, '08/03/2019', '10:47:19 AM', '', 'Student Retain', ''),
-(32, '08/03/2019', '10:47:19 AM', '', 'Student Retain', ''),
-(33, '08/03/2019', '10:47:26 AM', '', 'Student Retain', ''),
-(34, '08/03/2019', '10:47:26 AM', '', 'Student Retain', ''),
-(35, '08/03/2019', '10:50:14 AM', '', 'Attendance Updated', 'cse'),
-(36, '08/03/2019', '10:50:27 AM', '', 'Attendance Updated', 'cse'),
-(37, '08/03/2019', '10:50:40 AM', '', 'Attendance Updated', 'cse'),
-(38, '08/03/2019', '10:50:45 AM', '', 'Attendance Updated', 'cse'),
-(39, '09/03/2019', '01:01:29 PM', '', 'Attendance Updated', 'cse'),
-(40, '09/03/2019', '01:01:30 PM', '', 'Attendance Updated', 'cse'),
-(41, '09/03/2019', '01:01:31 PM', '', 'Attendance Updated', 'cse'),
-(42, '09/03/2019', '01:01:33 PM', '', 'Attendance Updated', 'cse'),
-(43, '09/03/2019', '01:01:37 PM', '', 'Attendance Updated', 'cse'),
-(44, '09/03/2019', '01:01:39 PM', '', 'Attendance Updated', 'cse'),
-(45, '09/03/2019', '02:02:10 PM', '', 'Student Detained', ''),
-(46, '09/03/2019', '02:02:13 PM', '', 'Student Detained', ''),
-(47, '09/03/2019', '02:02:42 PM', '', 'Student Detained', ''),
-(48, '09/03/2019', '03:01:52 PM', '', '\'\' subject added!', 'cse'),
-(49, '09/03/2019', '03:51:53 PM', '', 'Attendance Entered of lecture:3, 4 of semester:6', 'cse'),
-(50, '09/03/2019', '03:51:57 PM', '', 'Attendance Entered of lecture:1 of semester:6', 'cse'),
-(51, '09/03/2019', '04:41:06 PM', '', 'Attendance Entered of lecture:6, 7 of semester:6', 'cse'),
-(52, '09/03/2019', '06:46:34 PM', '', 'Attendance Entered of lecture:3, 4 of semester:2', 'cse'),
-(53, '09/03/2019', '06:47:14 PM', '', 'Attendance Entered of lecture:5 of semester:4', 'cse'),
-(54, '09/03/2019', '08:04:08 PM', '', 'Attendance Updated', 'cse'),
-(55, '09/03/2019', '08:04:09 PM', '', 'Attendance Updated', 'cse'),
-(56, '10/03/2019', '04:55:09 AM', '', 'Attendance Entered of lecture:1 of semester:6', 'cse'),
-(57, '10/03/2019', '04:55:21 AM', '', 'Attendance Entered of lecture:3, 4 of semester:2', 'cse'),
-(58, '10/03/2019', '04:55:40 AM', '', 'Attendance Entered of lecture:5 of semester:4', 'cse'),
-(59, '10/03/2019', '04:55:59 AM', '', 'Attendance Entered of lecture:6, 7 of semester:6', 'cse'),
-(60, '10/03/2019', '08:59:01 AM', '', '\'\' subject added!', 'cse'),
-(61, '10/03/2019', '08:59:02 AM', '', '\'\' subject added!', 'cse'),
-(62, '10/03/2019', '08:59:02 AM', '', '\'\' subject added!', 'cse'),
-(63, '10/03/2019', '09:10:28 AM', '', '\'\' subject added!', 'cse'),
-(64, '10/03/2019', '09:56:00 AM', '', 'Attendance Updated', 'cse'),
-(65, '10/03/2019', '09:57:30 AM', '', 'Attendance Updated', 'cse'),
-(66, '10/03/2019', '09:57:31 AM', '', 'Attendance Updated', 'cse'),
-(67, '10/03/2019', '09:57:33 AM', '', 'Attendance Updated', 'cse'),
-(68, '10/03/2019', '09:57:38 AM', '', 'Attendance Updated', 'cse'),
-(69, '10/03/2019', '09:57:44 AM', '', 'Attendance Updated', 'cse'),
-(70, '10/03/2019', '10:24:33 AM', '', '\'\' subject added!', 'cse'),
-(71, '10/03/2019', '10:24:48 AM', '', '\'\' subject added!', 'cse'),
-(72, '10/03/2019', '10:24:51 AM', '', '\'\' subject added!', 'cse'),
-(73, '10/03/2019', '10:52:11 AM', '', 'Attendance Updated', 'cse'),
-(74, '10/03/2019', '10:52:11 AM', '', 'Attendance Updated', 'cse'),
-(75, '10/03/2019', '11:07:51 AM', '', 'Student Detained', ''),
-(76, '10/03/2019', '11:07:55 AM', '', 'Student Retain', ''),
-(77, '10/03/2019', '11:14:13 AM', '', '\'\' subject added!', 'cse'),
-(78, '10/03/2019', '11:20:45 AM', '', 'Student Retain', ''),
-(79, '10/03/2019', '11:21:55 AM', '', 'Student Retain', ''),
-(80, '10/03/2019', '11:22:00 AM', '', 'Student Detained', ''),
-(81, '10/03/2019', '11:22:02 AM', '', 'Student Detained', ''),
-(82, '10/03/2019', '12:43:16 PM', '', 'Student Detained', ''),
-(83, '10/03/2019', '01:40:21 PM', '', 'Student Detained', ''),
-(84, '10/03/2019', '01:40:23 PM', '', 'Student Detained', ''),
-(85, '10/03/2019', '01:40:23 PM', '', 'Student Retain', ''),
-(86, '10/03/2019', '01:40:26 PM', '', 'Student Retain', ''),
-(87, '10/03/2019', '01:57:39 PM', '', '\'DG\' subject added! With Subject Code 1414', 'cse'),
-(88, '10/03/2019', '02:09:25 PM', '', 'Student Detained 1402', ''),
-(89, '10/03/2019', '02:09:35 PM', '', 'Student Retain 1402', ''),
-(90, '10/03/2019', '02:18:15 PM', '', 'Password Changed by sanjeev344', 'department'),
-(91, '10/03/2019', '02:38:10 PM', '', 'Password Changed by sanjeev344', 'department'),
-(92, '10/03/2019', '02:38:53 PM', '', 'Attendance Updated Roll Number 1414 of Date2019-3-6', 'cse'),
-(93, '10/03/2019', '02:39:39 PM', '', 'Attendance Updated Roll Number 1414 of 2019-3-6', 'cse'),
-(94, '10/03/2019', '02:41:05 PM', '', 'Attendance Updated Roll Number 21414 of 2019-3-6', 'cse'),
-(95, '10/03/2019', '02:42:15 PM', '', 'Attendance Updated Roll Number 1414 Lecture 2 of 2019-3-6', 'cse'),
-(96, '10/03/2019', '02:49:05 PM', '', 'Student Detained 1405', ''),
-(97, '10/03/2019', '02:49:08 PM', '', 'Student Retained 1405', ''),
-(98, '10/03/2019', '02:54:51 PM', '', 'Student Detained 1405', 'cse'),
-(99, '10/03/2019', '02:54:53 PM', '', 'Student Retained 1405', 'cse'),
-(100, '10/03/2019', '04:12:40 PM', '', 'Attendance Updated Roll Number 1402 Lecture 2 of 2019-2-4', 'cse'),
-(101, '10/03/2019', '04:12:40 PM', '', 'Attendance Updated Roll Number 1402 Lecture 2 of 2019-2-4', 'cse'),
-(102, '11/03/2019', '10:17:22 AM', '', 'Attendance Updated Roll Number 1401 Lecture 2 of 2019-2-4', 'cse'),
-(103, '11/03/2019', '10:17:22 AM', '', 'Attendance Updated Roll Number 1401 Lecture 2 of 2019-2-4', 'cse'),
-(104, '11/03/2019', '10:17:23 AM', '', 'Attendance Updated Roll Number 1401 Lecture 2 of 2019-2-4', 'cse'),
-(105, '11/03/2019', '10:17:23 AM', '', 'Attendance Updated Roll Number 1401 Lecture 2 of 2019-2-4', 'cse'),
-(106, '12/03/2019', '06:53:58 AM', '', 'Student Detained 1401', 'cse'),
-(107, '12/03/2019', '06:54:00 AM', '', 'Student Retained 1401', 'cse'),
-(108, '12/03/2019', '07:26:49 AM', '', 'Attendance Entered of lecture:5 of semester:6', 'cse'),
-(109, '12/03/2019', '07:32:59 AM', '', 'Attendance Updated', 'cse'),
-(110, '14/03/2019', '06:43:27 AM', '', 'Attendance Entered of lecture:5 of semester:6', 'cse'),
-(111, '14/03/2019', '10:23:26 AM', '', 'Attendance Updated', 'cse'),
-(112, '14/03/2019', '10:28:27 AM', '', 'Attendance Updated', 'cse'),
-(113, '14/03/2019', '10:28:28 AM', '', 'Attendance Updated', 'cse'),
-(114, '14/03/2019', '10:28:29 AM', '', 'Attendance Updated', 'cse'),
-(115, '14/03/2019', '10:28:30 AM', '', 'Attendance Updated', 'cse'),
-(116, '14/03/2019', '10:28:31 AM', '', 'Attendance Updated', 'cse'),
-(117, '14/03/2019', '10:28:32 AM', '', 'Attendance Updated', 'cse'),
-(118, '14/03/2019', '10:28:32 AM', '', 'Attendance Updated', 'cse'),
-(119, '14/03/2019', '10:28:33 AM', '', 'Attendance Updated', 'cse'),
-(120, '14/03/2019', '10:28:34 AM', '', 'Attendance Updated', 'cse'),
-(121, '14/03/2019', '10:28:35 AM', '', 'Attendance Updated', 'cse'),
-(122, '14/03/2019', '10:28:35 AM', '', 'Attendance Updated', 'cse'),
-(123, '14/03/2019', '10:28:36 AM', '', 'Attendance Updated', 'cse'),
-(124, '14/03/2019', '10:28:37 AM', '', 'Attendance Updated', 'cse'),
-(125, '14/03/2019', '10:28:38 AM', '', 'Attendance Updated', 'cse'),
-(126, '14/03/2019', '10:28:38 AM', '', 'Attendance Updated', 'cse'),
-(127, '14/03/2019', '10:28:39 AM', '', 'Attendance Updated', 'cse'),
-(128, '14/03/2019', '10:28:40 AM', '', 'Attendance Updated', 'cse'),
-(129, '15/03/2019', '06:43:01 AM', '', 'Attendance Updated', 'cse'),
-(130, '15/03/2019', '06:43:02 AM', '', 'Attendance Updated', 'cse'),
-(131, '15/03/2019', '06:43:03 AM', '', 'Attendance Updated', 'cse'),
-(132, '15/03/2019', '06:43:04 AM', '', 'Attendance Updated', 'cse'),
-(133, '15/03/2019', '07:15:27 AM', '', 'Attendance Entered of lecture:2 of semester:6', 'cse'),
-(134, '15/03/2019', '10:21:18 AM', '', 'Attendance Entered of lecture:6, 7 of semester:6', 'cse'),
-(135, '15/03/2019', '10:30:25 AM', '', 'Attendance Updated', 'cse'),
-(136, '15/03/2019', '10:30:27 AM', '', 'Attendance Updated', 'cse'),
-(137, '15/03/2019', '10:30:27 AM', '', 'Attendance Updated', 'cse'),
-(138, '15/03/2019', '10:30:38 AM', '', 'Attendance Updated', 'cse'),
-(139, '15/03/2019', '10:30:39 AM', '', 'Attendance Updated', 'cse'),
-(140, '15/03/2019', '10:30:39 AM', '', 'Attendance Updated', 'cse'),
-(141, '15/03/2019', '10:30:39 AM', '', 'Attendance Updated', 'cse'),
-(142, '15/03/2019', '10:35:05 AM', '', 'Timetable Update:IM Set to IM on lecture:1 of monday of semester:6', 'cse'),
-(143, '15/03/2019', '10:38:51 AM', '', 'Attendance Entered of lecture:1 of semester:6', 'cse'),
-(144, '15/03/2019', '10:40:04 AM', '', 'Attendance Entered of lecture:3, 4 of semester:6', 'cse'),
-(145, '15/03/2019', '10:40:08 AM', '', 'Attendance Entered of lecture:3, 4 of semester:6', 'cse'),
-(146, '15/03/2019', '10:44:00 AM', '', 'Attendance Entered of lecture:5 of semester:6', 'cse'),
-(147, '15/03/2019', '10:45:08 AM', '', 'Attendance Entered of lecture:3 of semester:4', 'cse'),
-(148, '15/03/2019', '10:50:59 AM', '', 'Attendance Entered of lecture:6, 7 of semester:6', 'cse'),
-(149, '15/03/2019', '10:52:15 AM', '', 'Attendance Entered of lecture:1, 2 of semester:2', 'cse'),
-(150, '15/03/2019', '10:54:46 AM', '', 'Timetable Update:NS Set to MSD on lecture:2 of tuesday of semester:6', 'cse'),
-(151, '15/03/2019', '10:54:57 AM', '', 'Timetable Update:IM Set to BOM on lecture:1 of monday of semester:6', 'cse'),
-(152, '15/03/2019', '10:55:15 AM', '', 'Timetable Update:IM Set to BOM on lecture:1 of monday of semester:6', 'cse'),
-(153, '15/03/2019', '10:55:28 AM', '', 'Timetable Update:IM Set to NS on lecture:1 of monday of semester:6', 'cse'),
-(154, '15/03/2019', '10:56:52 AM', '', 'Timetable Update:NS Set to IM on lecture:1 of monday of semester:6', 'cse'),
-(155, '15/03/2019', '10:59:46 AM', '', 'Attendance Entered of lecture:6, 7 of semester:6', 'cse'),
-(156, '15/03/2019', '11:00:13 AM', '', 'Attendance Entered of lecture:1 of semester:6', 'cse'),
-(157, '15/03/2019', '11:01:10 AM', '', 'Student Retained 1410', 'cse'),
-(158, '15/03/2019', '11:01:15 AM', '', 'Student Retained 1423', 'cse'),
-(159, '15/03/2019', '11:01:22 AM', '', 'Student Detained 1404', 'cse'),
-(160, '15/03/2019', '11:01:29 AM', '', 'Student Detained 1410', 'cse'),
-(161, '15/03/2019', '11:01:31 AM', '', 'Attendance Entered of lecture:6, 7 of semester:4', 'cse'),
-(162, '15/03/2019', '11:01:35 AM', '', 'Attendance Entered of lecture:3, 4 of semester:6', 'cse'),
-(163, '15/03/2019', '11:01:46 AM', '', 'Attendance Updated', 'cse'),
-(164, '15/03/2019', '11:02:13 AM', '', 'Attendance Entered of lecture:6, 7 of semester:6', 'cse'),
-(165, '15/03/2019', '11:02:28 AM', '', 'Attendance Entered of lecture:2 of semester:6', 'cse'),
-(166, '15/03/2019', '11:13:16 AM', '', 'Attendance Updated', 'cse'),
-(167, '15/03/2019', '11:13:17 AM', '', 'Attendance Updated', 'cse'),
-(168, '15/03/2019', '11:13:19 AM', '', 'Attendance Updated', 'cse'),
-(169, '15/03/2019', '11:13:20 AM', '', 'Attendance Updated', 'cse'),
-(170, '15/03/2019', '11:13:41 AM', '', 'Attendance Updated', 'cse'),
-(171, '15/03/2019', '11:13:43 AM', '', 'Attendance Updated', 'cse'),
-(172, '15/03/2019', '11:13:44 AM', '', 'Attendance Updated', 'cse'),
-(173, '15/03/2019', '11:13:46 AM', '', 'Attendance Updated', 'cse'),
-(174, '15/03/2019', '11:14:05 AM', '', 'Student Detained 1202', 'cse'),
-(175, '15/03/2019', '11:18:56 AM', '', 'Student Retained 1202', 'cse'),
-(176, '15/03/2019', '11:21:54 AM', '', 'Attendance Updated', 'cse'),
-(177, '15/03/2019', '11:21:56 AM', '', 'Attendance Updated', 'cse'),
-(178, '15/03/2019', '11:21:57 AM', '', 'Attendance Updated', 'cse'),
-(179, '15/03/2019', '11:22:31 AM', '', 'Attendance Updated', 'cse'),
-(180, '15/03/2019', '02:39:37 PM', '', 'Attendance Updated', 'cse'),
-(181, '15/03/2019', '02:39:39 PM', '', 'Attendance Updated', 'cse'),
-(182, '15/03/2019', '02:39:40 PM', '', 'Attendance Updated', 'cse'),
-(183, '15/03/2019', '02:39:41 PM', '', 'Attendance Updated', 'cse'),
-(184, '15/03/2019', '02:40:08 PM', '', 'Attendance Updated', 'cse'),
-(185, '15/03/2019', '02:40:10 PM', '', 'Attendance Updated', 'cse'),
-(186, '15/03/2019', '02:40:11 PM', '', 'Attendance Updated', 'cse'),
-(187, '15/03/2019', '02:40:34 PM', '', 'Attendance Updated', 'cse'),
-(188, '15/03/2019', '02:40:35 PM', '', 'Attendance Updated', 'cse'),
-(189, '15/03/2019', '02:40:37 PM', '', 'Attendance Updated', 'cse'),
-(190, '15/03/2019', '02:40:38 PM', '', 'Attendance Updated', 'cse'),
-(191, '15/03/2019', '02:40:39 PM', '', 'Attendance Updated', 'cse'),
-(192, '15/03/2019', '02:40:40 PM', '', 'Attendance Updated', 'cse'),
-(193, '15/03/2019', '02:40:41 PM', '', 'Attendance Updated', 'cse'),
-(194, '15/03/2019', '02:42:11 PM', '', 'Attendance Entered of lecture:5 of semester:6', 'cse'),
-(195, '15/03/2019', '02:44:13 PM', '', 'Attendance Updated', 'cse'),
-(196, '15/03/2019', '02:45:36 PM', '', 'Attendance Entered of lecture:4 of semester:6', 'cse'),
-(197, '15/03/2019', '02:46:01 PM', '', 'Attendance Updated', 'cse'),
-(198, '15/03/2019', '02:46:02 PM', '', 'Attendance Updated', 'cse'),
-(199, '15/03/2019', '02:47:00 PM', '', 'Attendance Updated', 'cse'),
-(200, '15/03/2019', '02:47:01 PM', '', 'Attendance Updated', 'cse'),
-(201, '15/03/2019', '02:47:05 PM', '', 'Attendance Updated', 'cse'),
-(202, '15/03/2019', '02:47:06 PM', '', 'Attendance Updated', 'cse'),
-(203, '15/03/2019', '02:47:06 PM', '', 'Attendance Updated', 'cse'),
-(204, '15/03/2019', '02:47:07 PM', '', 'Attendance Updated', 'cse'),
-(205, '15/03/2019', '02:47:09 PM', '', 'Attendance Updated', 'cse'),
-(206, '15/03/2019', '02:47:10 PM', '', 'Attendance Updated', 'cse'),
-(207, '15/03/2019', '02:47:11 PM', '', 'Attendance Updated', 'cse'),
-(208, '15/03/2019', '02:47:12 PM', '', 'Attendance Updated', 'cse'),
-(209, '15/03/2019', '02:47:13 PM', '', 'Attendance Updated', 'cse'),
-(210, '15/03/2019', '02:47:14 PM', '', 'Attendance Updated', 'cse'),
-(211, '15/03/2019', '02:47:15 PM', '', 'Attendance Updated', 'cse'),
-(212, '15/03/2019', '02:47:16 PM', '', 'Attendance Updated', 'cse'),
-(213, '15/03/2019', '02:47:18 PM', '', 'Attendance Updated', 'cse'),
-(214, '15/03/2019', '02:47:19 PM', '', 'Attendance Updated', 'cse'),
-(215, '15/03/2019', '02:47:59 PM', '', 'Attendance Updated', 'cse'),
-(216, '15/03/2019', '02:48:01 PM', '', 'Attendance Updated', 'cse'),
-(217, '15/03/2019', '02:48:02 PM', '', 'Attendance Updated', 'cse'),
-(218, '15/03/2019', '02:48:03 PM', '', 'Attendance Updated', 'cse'),
-(219, '15/03/2019', '02:48:04 PM', '', 'Attendance Updated', 'cse'),
-(220, '15/03/2019', '02:48:04 PM', '', 'Attendance Updated', 'cse'),
-(221, '15/03/2019', '02:48:06 PM', '', 'Attendance Updated', 'cse'),
-(222, '15/03/2019', '02:48:07 PM', '', 'Attendance Updated', 'cse'),
-(223, '15/03/2019', '02:48:07 PM', '', 'Attendance Updated', 'cse'),
-(224, '15/03/2019', '02:48:08 PM', '', 'Attendance Updated', 'cse'),
-(225, '15/03/2019', '02:48:09 PM', '', 'Attendance Updated', 'cse'),
-(226, '15/03/2019', '02:48:11 PM', '', 'Attendance Updated', 'cse'),
-(227, '15/03/2019', '02:48:11 PM', '', 'Attendance Updated', 'cse'),
-(228, '15/03/2019', '02:48:12 PM', '', 'Attendance Updated', 'cse'),
-(229, '15/03/2019', '02:48:13 PM', '', 'Attendance Updated', 'cse'),
-(230, '15/03/2019', '02:48:13 PM', '', 'Attendance Updated', 'cse'),
-(231, '15/03/2019', '02:48:14 PM', '', 'Attendance Updated', 'cse'),
-(232, '15/03/2019', '02:48:15 PM', '', 'Attendance Updated', 'cse'),
-(233, '15/03/2019', '02:48:17 PM', '', 'Attendance Updated', 'cse'),
-(234, '15/03/2019', '02:48:18 PM', '', 'Attendance Updated', 'cse'),
-(235, '15/03/2019', '02:50:08 PM', '', 'Attendance Updated', 'cse'),
-(236, '15/03/2019', '02:50:09 PM', '', 'Attendance Updated', 'cse'),
-(237, '15/03/2019', '02:50:09 PM', '', 'Attendance Updated', 'cse'),
-(238, '15/03/2019', '02:50:10 PM', '', 'Attendance Updated', 'cse'),
-(239, '15/03/2019', '02:50:10 PM', '', 'Attendance Updated', 'cse'),
-(240, '15/03/2019', '02:50:11 PM', '', 'Attendance Updated', 'cse'),
-(241, '15/03/2019', '02:50:11 PM', '', 'Attendance Updated', 'cse'),
-(242, '15/03/2019', '02:50:12 PM', '', 'Attendance Updated', 'cse'),
-(243, '15/03/2019', '02:50:14 PM', '', 'Attendance Updated', 'cse'),
-(244, '15/03/2019', '02:50:14 PM', '', 'Attendance Updated', 'cse'),
-(245, '15/03/2019', '02:50:15 PM', '', 'Attendance Updated', 'cse'),
-(246, '15/03/2019', '02:50:15 PM', '', 'Attendance Updated', 'cse'),
-(247, '15/03/2019', '02:50:16 PM', '', 'Attendance Updated', 'cse'),
-(248, '15/03/2019', '02:50:18 PM', '', 'Attendance Updated', 'cse'),
-(249, '15/03/2019', '02:50:18 PM', '', 'Attendance Updated', 'cse'),
-(250, '15/03/2019', '02:50:19 PM', '', 'Attendance Updated', 'cse'),
-(251, '15/03/2019', '02:50:22 PM', '', 'Attendance Updated', 'cse'),
-(252, '15/03/2019', '02:50:23 PM', '', 'Attendance Updated', 'cse'),
-(253, '15/03/2019', '02:50:25 PM', '', 'Attendance Updated', 'cse'),
-(254, '15/03/2019', '02:50:25 PM', '', 'Attendance Updated', 'cse'),
-(255, '15/03/2019', '02:50:26 PM', '', 'Attendance Updated', 'cse'),
-(256, '15/03/2019', '02:50:26 PM', '', 'Attendance Updated', 'cse'),
-(257, '15/03/2019', '02:50:27 PM', '', 'Attendance Updated', 'cse'),
-(258, '15/03/2019', '02:50:27 PM', '', 'Attendance Updated', 'cse'),
-(259, '15/03/2019', '02:50:28 PM', '', 'Attendance Updated', 'cse'),
-(260, '15/03/2019', '02:50:29 PM', '', 'Attendance Updated', 'cse'),
-(261, '15/03/2019', '02:50:30 PM', '', 'Attendance Updated', 'cse'),
-(262, '15/03/2019', '02:50:30 PM', '', 'Attendance Updated', 'cse'),
-(263, '15/03/2019', '02:50:32 PM', '', 'Attendance Updated', 'cse'),
-(264, '15/03/2019', '02:50:33 PM', '', 'Attendance Updated', 'cse'),
-(265, '15/03/2019', '02:50:33 PM', '', 'Attendance Updated', 'cse'),
-(266, '15/03/2019', '02:50:34 PM', '', 'Attendance Updated', 'cse'),
-(267, '15/03/2019', '02:50:35 PM', '', 'Attendance Updated', 'cse'),
-(268, '15/03/2019', '02:50:36 PM', '', 'Attendance Updated', 'cse'),
-(269, '15/03/2019', '02:50:37 PM', '', 'Attendance Updated', 'cse'),
-(270, '15/03/2019', '02:50:37 PM', '', 'Attendance Updated', 'cse'),
-(271, '15/03/2019', '02:50:38 PM', '', 'Attendance Updated', 'cse'),
-(272, '15/03/2019', '02:50:38 PM', '', 'Attendance Updated', 'cse'),
-(273, '15/03/2019', '02:50:39 PM', '', 'Attendance Updated', 'cse'),
-(274, '15/03/2019', '02:50:40 PM', '', 'Attendance Updated', 'cse'),
-(275, '15/03/2019', '02:50:41 PM', '', 'Attendance Updated', 'cse'),
-(276, '15/03/2019', '02:50:42 PM', '', 'Attendance Updated', 'cse'),
-(277, '15/03/2019', '02:50:43 PM', '', 'Attendance Updated', 'cse'),
-(278, '15/03/2019', '02:50:44 PM', '', 'Attendance Updated', 'cse'),
-(279, '15/03/2019', '02:50:45 PM', '', 'Attendance Updated', 'cse'),
-(280, '15/03/2019', '02:50:49 PM', '', 'Attendance Updated', 'cse'),
-(281, '15/03/2019', '02:50:49 PM', '', 'Attendance Updated', 'cse'),
-(282, '15/03/2019', '02:50:49 PM', '', 'Attendance Updated', 'cse'),
-(283, '15/03/2019', '02:50:50 PM', '', 'Attendance Updated', 'cse'),
-(284, '15/03/2019', '02:50:52 PM', '', 'Attendance Updated', 'cse'),
-(285, '15/03/2019', '02:50:52 PM', '', 'Attendance Updated', 'cse'),
-(286, '15/03/2019', '02:50:53 PM', '', 'Attendance Updated', 'cse'),
-(287, '15/03/2019', '02:50:54 PM', '', 'Attendance Updated', 'cse'),
-(288, '15/03/2019', '02:50:54 PM', '', 'Attendance Updated', 'cse'),
-(289, '15/03/2019', '02:50:58 PM', '', 'Attendance Updated', 'cse'),
-(290, '15/03/2019', '02:50:59 PM', '', 'Attendance Updated', 'cse'),
-(291, '15/03/2019', '02:50:59 PM', '', 'Attendance Updated', 'cse'),
-(292, '15/03/2019', '02:51:00 PM', '', 'Attendance Updated', 'cse'),
-(293, '15/03/2019', '02:51:02 PM', '', 'Attendance Updated', 'cse'),
-(294, '15/03/2019', '02:51:02 PM', '', 'Attendance Updated', 'cse'),
-(295, '15/03/2019', '02:51:03 PM', '', 'Attendance Updated', 'cse'),
-(296, '15/03/2019', '02:51:04 PM', '', 'Attendance Updated', 'cse'),
-(297, '15/03/2019', '02:51:04 PM', '', 'Attendance Updated', 'cse'),
-(298, '15/03/2019', '02:51:06 PM', '', 'Attendance Updated', 'cse'),
-(299, '15/03/2019', '02:51:07 PM', '', 'Attendance Updated', 'cse'),
-(300, '15/03/2019', '02:51:08 PM', '', 'Attendance Updated', 'cse'),
-(301, '15/03/2019', '02:51:09 PM', '', 'Attendance Updated', 'cse'),
-(302, '15/03/2019', '02:51:10 PM', '', 'Attendance Updated', 'cse'),
-(303, '15/03/2019', '02:51:11 PM', '', 'Attendance Updated', 'cse'),
-(304, '15/03/2019', '02:51:11 PM', '', 'Attendance Updated', 'cse'),
-(305, '15/03/2019', '02:51:12 PM', '', 'Attendance Updated', 'cse'),
-(306, '15/03/2019', '02:51:13 PM', '', 'Attendance Updated', 'cse'),
-(307, '15/03/2019', '02:51:14 PM', '', 'Attendance Updated', 'cse'),
-(308, '15/03/2019', '02:51:15 PM', '', 'Attendance Updated', 'cse'),
-(309, '15/03/2019', '02:51:16 PM', '', 'Attendance Updated', 'cse'),
-(310, '15/03/2019', '02:51:40 PM', '', 'Attendance Entered of lecture:3, 4 of semester:6', 'cse'),
-(311, '04/10/2019', '10:48:01 AM', 'hardeep581', 'Timetable Update: Set to CN on lecture:1 of tuesday of semester:5', 'cse'),
-(312, '04/10/2019', '09:05:07 AM', 'hardeep581', 'Attendance Entered of lecture:3, 4 of semester:5', 'cse');
 
 -- --------------------------------------------------------
 
@@ -3200,6 +2901,12 @@ ALTER TABLE `ae_timetable`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `assignments`
+--
+ALTER TABLE `assignments`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `ce`
 --
 ALTER TABLE `ce`
@@ -3324,6 +3031,12 @@ ALTER TABLE `ae_timetable`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
+-- AUTO_INCREMENT for table `assignments`
+--
+ALTER TABLE `assignments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `ce`
 --
 ALTER TABLE `ce`
@@ -3387,7 +3100,7 @@ ALTER TABLE `ee_timetable`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `sno` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=313;
+  MODIFY `sno` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `me`

@@ -388,6 +388,28 @@ if(isset($_POST['showTimetable'])) {
     echo json_encode($timetable);
 }
 
+// To fetch the lectures of a specific teacher by semester 
+if(isset($_POST['fetchSubj'])) {
+    $query = "SELECT * FROM subjects WHERE department='" . $_POST['department'] . "' AND semester='" . $_POST['semester'] . "' AND teacher_code='".$_POST['teacher']."' ORDER BY lecture_type,subject_name";
+    $result = $conn->query($query);
+    $theorySubjects = array();
+    $practicalSubjects = array();
+    while($row = $result->fetch_array()) {
+        if($row[6] == "Theory") {
+            array_push($theorySubjects, array(
+                "code" => $row[2],
+                "teacherCode" => $row[4],
+                "initials" => $row[3],
+                "name" => $row[1]
+            ));
+        }
+    }
+    foreach($theorySubjects as $row) {
+        echo "<option subject-type='Theory' teacher-code='". $row['teacherCode'] ."'>" . $row['initials'] . "</option>";
+    }
+}
+
+
 // To get the list of subjects in a department by semester
 if(isset($_POST['fetchSubjects'])) {
     $query = "SELECT * FROM subjects WHERE department='" . $_POST['department'] . "' AND semester='" . $_POST['semester'] . "' ORDER BY lecture_type,subject_name";
@@ -763,19 +785,18 @@ if(isset($_POST['addNotice'])) {
 
 // To add the new assignment
 if(isset($_POST['addAssignment'])) {
-    if(!empty($_FILES['assignment-file']['name'])){
+     if(!empty($_FILES['assignment-file']['name'])){
         $loc='./filecontent/assignments/';
-        $filename=rand(100,999).$_FILES['assignment-file']['name'];
+        $filename = rand(100,999).$_FILES['assignment-file']['name'];
         move_uploaded_file($_FILES['assignment-file']['tmp_name'], $loc.$filename);
-        if(file_exists($loc.$filename)){
-            $query = "INSERT INTO assignments VALUES(null,'".date('Y-m-j')."', '".$_POST['assignment-subject']."', '".$_POST['assignment-no']."', '".$loc.$filename."', '".$_POST['assignment-text']."', '".$_POST['department']."')";
-        }
+        if(file_exists($loc.$filename))
+            $query = "INSERT INTO assignments VALUES(NULL, '".$_POST['assignment-no']."', '".$_POST['submission-date']."', '".$_POST['assignment-text']."', '".$filename."', '".$_POST['semester']."', '".$_POST['subject']."', '".$_POST['department']."')";
     }
-    else{
-        echo $query = "INSERT INTO assignments VALUES(null,'".date('Y-m-j')."', '".$_POST['assignment-subject']."', '".$_POST['assignment-no']."', '', '".$_POST['assignment-text']."', '".$_POST['department']."')";
-    }
-    $conn->query($query);
-    if($conn){
+    else
+            $query = "INSERT INTO assignments VALUES(NULL, '".$_POST['assignment-no']."', '".$_POST['submission-date']."', '".$_POST['assignment-text']."', '', '".$_POST['semester']."', '".$_POST['subject']."', '".$_POST['department']."')";
+        // echo $query;
+    $result = $conn->query($query);
+    if($result){
         echo "true";
     }
 }

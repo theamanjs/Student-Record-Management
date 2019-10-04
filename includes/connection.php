@@ -1,3 +1,3 @@
 <?php
-$conn = new mysqli("localhost","root","","gndpc_attendance");
+$conn = new mysqli("localhost","root","this.Unlock()","gndpc_attendance");
 ?>
