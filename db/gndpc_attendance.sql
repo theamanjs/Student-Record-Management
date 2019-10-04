@@ -3123,5 +3123,34 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+--
+-- Table structure for table `assignments`
+--
+
+CREATE TABLE `assignments` (
+  `id` int(11) NOT NULL,
+  `number` text NOT NULL,
+  `submission_date` date NOT NULL,
+  `text` varchar(500) NOT NULL,
+  `doc` text NOT NULL,
+  `semester` int(5) NOT NULL,
+  `subject` varchar(99) NOT NULL,
+  `department` varchar(99) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+ALTER TABLE `assignments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `assignments`
+--
+ALTER TABLE `assignments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
 
 
