@@ -41,6 +41,14 @@
         background-color: var(--themeColorLight) !important;
         color: #FFFFFF !important;
     }
+    .sub-assm{
+  color:var(--themeColorDark) !important;
+}
+.sub-assm:hover{
+  color:var(--themeColorDark) !important;
+  cursor:pointer !important; 
+}
+
     </style>
     <script src="./assets/js/core/jquery.min.js"></script>
     <?php
@@ -143,7 +151,92 @@ include("./loader.php");
 }
 ?>
 
+<div class="modal" tabindex="-1" role="dialog" id="submitAssignment">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header custom_modal_header">
+                    <h5 class="modal-title custom_modal_title">Submit Assignment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
+                    <form class="custom_add_form" method="post" id="submitAssignmentForm">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">Assignment Number
+                                    </label>
+                                    <input type="text" name="assignment-no" id="assignment-no" class="form-control"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Submission Date
+                                    </label>
+                                    <input type="date" name="submission-date" id="submission-date" class="form-control"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="custom_add_form form-group col-12">
+                            <label for="assignment-file" class="bmd-label-floating file-label">Document
+                                Attachment</label>
+                            <input type="file" name="assignment-file" id="assignment-file"
+                                onchange="updateFileLabel(this)">
+                            <a href="#" class="btn btn-sm btn-primary float-right add_submit_button"
+                                onclick="$('#assignment-file').trigger('click');">Select File</a>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="bmd-label-floating">Assignment text
+                                    </label>
+                                    <textarea name="assignment-text" id="assignment-text" class="form-control"
+                                        required></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6">
+
+                                <label for="subjectList" class="col-form-label col-md-12">Semester</label>
+                                <select class="selectpicker custom-select1 col-md-12" id="semester" name="semester" onchange="fetchSubjects(this)">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label for="subjectList" class="col-form-label col-md-12">Subjects</label>
+                                <select class="selectpicker custom-select1 col-md-12" id="subject" name="subject">
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group col-12 pr-4 text-right">
+                            <button class="btn btn-primary ml-2 custom-search-button" type="button"
+                                onclick="addAssignment()">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
     let colorDark = localStorage.getItem("themeColorDark");
@@ -259,17 +352,20 @@ include("./loader.php");
             <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
             <script src="./assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
             <script>
+            let isTeacher = false;
             $(document).ready(function() {
                 $(".loader-container").css("display", "none");
             });
+
             </script>
             <?php   if($teacherData['designation'] == 'hod' || $teacherData['designation'] == 'lecturer') { ?>
             <script>
+            
             function addAssignment() {
                 let data = new FormData($("#addAssignmentForm")[0]);
                 data.append("department", "<?php echo $teacherData['department'] ?>" );
                 data.append("addAssignment", true);
-                console.log(data);
+                // console.log(data);
                 $.ajax({
                     url: "data-manipulation.php",
                     type: "POST",
@@ -277,7 +373,7 @@ include("./loader.php");
                     contentType: false,
                     processData: false,
                     success: function(response) {
-						
+                        // console.log(response); return;
                         $('.modal').modal('hide');
                         fetchAssignments();
                         if (response == "true") {
@@ -314,7 +410,7 @@ include("./loader.php");
                             $('#loadMoreButton').remove();
                         }
                         for (let i = init; i <= countLength; i++) {
-							console.log(assignmentArray);
+                            // console.log(assignmentArray);
                             assignments += `<div class="card card-collapse">
                                         <div class="card-header" role="tab" id="heading${i}">
                                           <h5 class="mb-0">
@@ -347,22 +443,24 @@ include("./loader.php");
             function updateFileLabel(file) {
                 $("label.file-label").text(file.files[0].name);
             }
-			function fetchSubjects(semester) {
+            function fetchSubjects(semester) {
                 $.ajax({
                     url: "data-manipulation.php",
                     type: "POST",
                     data: {
-						fetchSubj: true,
-						teacher: "<?php echo $teacherData['teacher_code'] ?>",
-						semester: semester.value,
-						department: "<?php echo $teacherData['department'] ?>"
-					},
+                        fetchSubj: true,
+                        teacher: "<?php echo $teacherData['teacher_code'] ?>",
+                        semester: semester.value,
+                        department: "<?php echo $teacherData['department'] ?>"
+                    },
                     success: function(response) {
+                        // console.log(response)
                         $("#subject").html(response);
-						$('.selectpicker').selectpicker('refresh');
+                        $('.selectpicker').selectpicker('refresh');
                     }
                 });
-			}
+            }
+
             </script>
             <script src="assets/sidebarSript.js"></script>
 
