@@ -13,10 +13,11 @@
 	</div>
 	<?php
         $navlink = array(
+	array('./student-class.php','home','Class'),
         array('./student-dashboard.php','dashboard','Lectures'),
         array('./student-attendance.php','content_paste','View Attendance'),
-		array('./notices.php','notifications_important','Notices'),
-		array('./assignment.php','assignment_ind','Assignment'),
+	array('./notices.php','notifications_important','Notices'),
+	array('./assignment.php','assignment_ind','Assignment'),
         array('./student-timetable.php','library_books','TimeTable')
         );
     ?>
