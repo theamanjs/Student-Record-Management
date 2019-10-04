@@ -2743,7 +2743,29 @@ INSERT INTO `subjects` (`id`, `subject_name`, `subject_code`, `subject_initials`
 (203, 'N/A', '0000', 'NA', 'na', 6, 'Theory', 'ce', '0'),
 (204, 'N/A', '0000', 'NA', 'na', 2, 'Theory', 'ae', '0'),
 (205, 'N/A', '0000', 'NA', 'na', 4, 'Theory', 'ae', '0'),
-(206, 'N/A', '0000', 'NA', 'na', 6, 'Theory', 'ae', '0');
+(206, 'N/A', '0000', 'NA', 'na', 6, 'Theory', 'ae', '0'),
+(218, 'C Programming', '1111', 'CP', 'sanje8592', 3, 'Theory', 'cse', '0'),
+(219, 'Multimedia  Application', '1112', 'MA', 'sonia3943', 3, 'Theory', 'cse', '0'),
+(220, 'Operating System', '1113', 'OS', 'harpr5369', 3, 'Theory', 'cse', '0'),
+(221, 'Digital Electronics', '1114', 'DE', 'harpr3773', 3, 'Theory', 'cse', '0'),
+(222, 'Software Engineering', '1115', 'SE', 'aman3580', 3, 'Theory', 'cse', '0'),
+(223, 'Internet Web Technology', '1116', 'IWT', 'prabh6412', 3, 'Theory', 'cse', '0'),
+(224, 'Operating System', '1150', 'OS', 'harpr5369', 3, 'Practical', 'cse', '0'),
+(226, 'C Programming', '1151', 'CP', 'sanje8592', 3, 'Practical', 'cse', '0'),
+(227, 'Multimedia Application', '1152', 'MA', 'sonia3943', 3, 'Practical', 'cse', '0'),
+(228, 'Digital Electronics', '1153', 'DE', 'harpr3773', 3, 'Practical', 'cse', '0'),
+(229, 'Internet Web Technology', '1154', 'IWT', 'prabh6412', 3, 'Practical', 'cse', '0'),
+(230, 'Computer Network', '1117', 'CN', 'sonia3943', 5, 'Theory', 'cse', '0'),
+(231, 'Visual Basics', '1118', 'VB', 'prabh6412', 5, 'Theory', 'cse', '0'),
+(232, 'Computer peripheral interface', '1119', 'CPI', 'aman3580', 5, 'Theory', 'cse', '0'),
+(233, 'Operating system', '1120', 'OS', 'harpr5369', 5, 'Theory', 'cse', '0'),
+(234, 'Open source technology', '1121', 'OST', 'harde8951', 5, 'Theory', 'cse', '0'),
+(235, 'Visual basic', '1155', 'VB', 'prabh6412', 5, 'Practical', 'cse', '0'),
+(236, 'Open source technology', '1156', 'OST', 'harde8951', 5, 'Practical', 'cse', '0'),
+(237, 'Operating System', '1157', 'OS', 'harpr5369', 5, 'Practical', 'cse', '0'),
+(238, 'project work', '1158', 'PW', 'harde8951', 5, 'Practical', 'cse', '0'),
+(239, 'Computer Network', '1159', 'CN', 'sonia3943', 5, 'Practical', 'cse', '0'),
+(240, 'Computer Peripheral Interface', '1160', 'CPI', 'aman3580', 5, 'Practical', 'cse', '0');
 
 -- --------------------------------------------------------
 
@@ -3100,4 +3122,6 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
 
