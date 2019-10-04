@@ -25,6 +25,7 @@
             <link rel="stylesheet" href="./assets/main_styles.css">
             <!-- CSS Files -->
             <link href="./assets/css/material-dashboard.min.css?v=2.1.1" rel="stylesheet" />
+            <link rel="stylesheet" href="./assets/css/bootstrap-select.min.css">
             <style>
             .date-card{
               margin-top:0 !important;
@@ -66,7 +67,7 @@ include("./loader.php");
               <div class="form-group">
                   <label class="bmd-label-floating">Assignment Number
                       </label>
-                      <input type="number" name="assignment-no" id="assignment-no" class="form-control" required>
+                      <input type="text" name="assignment-no" id="assignment-no" class="form-control" required>
                   </div>
               </div>
           </div>
@@ -82,18 +83,19 @@ include("./loader.php");
               <div class="form-group">
                   <label class="bmd-label-floating">Assignment text
                       </label>
-                      <input type="text" name="assignment-text" id="assignment-text" class="form-control" required>
+                      <textarea name="assignment-text" id="assignment-text" class="form-control" required></textarea>
                   </div>
               </div>
           </div>
 
         <div class="row">
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-12">
             <label for="subjectList" class="col-form-label col-md-12">Subjects</label>
-            <select id="subjectList" name="subjectList" class="col-md-12 selectpicker custom-select1" required onfocus="getInitialOld()" onchange="setDefaultTeacher()">
-            <option>aman</option>
-            <option>aman1</option>
-            <option>aman2</option>
+            <select class="selectpicker custom-select1 col-md-12" id="semester" name="semester" onchange="fetchTeachers()">
+              <option>MSD</option>
+              <option>MP</option>
+              <option>OOPS</option>
+              <option>MA</option>
             </select>
         </div>
           </div>
