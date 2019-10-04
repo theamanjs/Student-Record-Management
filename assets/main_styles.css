@@ -1,0 +1,662 @@
+/*----------------------------------------Attendance Card Hover-------------------------------------*/
+
+ .custom_attendance_card{
+      cursor: pointer;
+    }
+
+/*----------------------------------------Attendance Card Hover End-------------------------------------*/
+
+/*----------------------------------------PreLoader-------------------------------------*/
+.loader-container {
+  height: 100%;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 5;
+}
+.loader-card {
+  height: 100px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+}
+.loader {
+  height: 35px;
+  width: 35px;
+  border: 2px solid #ccc;
+  border-top: 2px solid #444;
+  animation: spin infinite 0.8s linear;
+  border-radius: 50%;
+}
+.loader-text {
+  position: relative;
+  left: 5px;
+  top: 10px;
+  color: #555;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*----------------------------------------PreLoader End-------------------------------------*/
+/*----------------------------------------Custom Select-------------------------------------*/
+
+.custom_add_form .form-group {
+  margin-top:25px !important;
+} 
+
+.selected .active{
+  background-color: var(--themeColorDark);
+  color: #FFF;
+}  
+
+.custom-select1 .btn{
+    background-color: transparent !important;
+    border: 2px solid var(--themeColorDark) !important;
+    color: var(--themeColorDark) !important;
+}
+
+.custom-select1 .btn:hover{
+    background-color: transparent !important;
+    border: 2px solid var(--themeColorDark) !important;
+    color: var(--themeColorDark) !important;
+}
+
+.custom-select1 .btn:active:hover, .btn:active:focus, .btn:active.focus, .btn.active:hover, .btn.active:focus, .btn.active.focus, .open > .btn.dropdown-toggle:hover, .open > .btn.dropdown-toggle:focus, .open > .btn.dropdown-toggle.focus, .show > .btn.dropdown-toggle:hover, .show > .btn.dropdown-toggle:focus, .show > .btn.dropdown-toggle.focus, .btn.btn-default:active:hover, .btn.btn-default:active:focus, .btn.btn-default:active.focus, .btn.btn-default.active:hover, .btn.btn-default.active:focus, .btn.btn-default.active.focus, .open > .btn.btn-default.dropdown-toggle:hover, .open > .btn.btn-default.dropdown-toggle:focus, .open > .btn.btn-default.dropdown-toggle.focus, .show > .btn.btn-default.dropdown-toggle:hover, .show > .btn.btn-default.dropdown-toggle:focus, .show > .btn.btn-default.dropdown-toggle.focus{
+    background-color: transparent !important;
+    border: 2px solid var(--themeColorDark) !important;
+    color: var(--themeColorDark) !important;
+
+}
+
+.btn:active, .btn.active, .open > .btn.dropdown-toggle, .show > .btn.dropdown-toggle, .btn.btn-default:active, .btn.btn-default.active, .open > .btn.btn-default.dropdown-toggle, .show > .btn.btn-default.dropdown-toggle{
+  background-color: transparent !important;
+    border: 2px solid var(--themeColorDark) !important;
+    color: var(--themeColorDark) !important;
+}
+
+ .dropdown-item.active, .dropdown-item:active{
+  background-color: var(--themeColorDark) !important;
+  color: #FFFFFF !important;
+ }
+
+/*----------------------------------------Custom Select End-------------------------------------*/
+
+
+/*----------------------------------------Attendance CheckBoxes-------------------------------------*/
+
+.tgl {
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  cursor: pointer;
+}
+.tgl > input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  /* Put the input behind the label so it doesn't overlay text */
+  visibility: hidden;
+}
+.tgl .tgl_body {
+  width: 60px;
+  height: 30px;
+  background: white;
+  border: 1px solid #dadde1;
+  display: inline-block;
+  position: relative;
+  border-radius: 50px;
+}
+.tgl .tgl_switch {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: white;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  border-radius: 50%;
+  border: 1px solid #ccd0d6;
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.13);
+  -moz-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), -moz-transform 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  -o-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), -o-transform 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  -webkit-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), -webkit-transform 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), transform 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  z-index: 1;
+}
+.tgl .tgl_track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 50px;
+}
+.tgl .tgl_bgd {
+  position: absolute;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  width: 55px;
+  -moz-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), right 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  -o-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), right 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  -webkit-transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), right 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  transition: left 250ms cubic-bezier(0.34, 1.61, 0.7, 1), right 250ms cubic-bezier(0.34, 1.61, 0.7, 1);
+  background: #23CF13 url("img/check.png") center center no-repeat;
+}
+.tgl .tgl_bgd-negative {
+  right: auto;
+  left: -45px;
+  background: #F0240C url("img/x.png") center center no-repeat;
+}
+.tgl:hover .tgl_switch {
+  border-color: #b5bbc3;
+  -moz-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  -webkit-transform: scale(1.06);
+  transform: scale(1.06);
+}
+.tgl:active .tgl_switch {
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.tgl > :not(:checked) ~ .tgl_body > .tgl_switch {
+  left: 30px;
+}
+.tgl > :not(:checked) ~ .tgl_body .tgl_bgd {
+  right: -45px;
+}
+.tgl > :not(:checked) ~ .tgl_body .tgl_bgd.tgl_bgd-negative {
+  right: auto;
+  left: -10px;
+}
+.roll-no {
+  vertical-align:top;
+  font-size: 1.3rem;
+  color: #2F3841;
+}
+
+/*----------------------------------------Attendance CheckBoxes End-------------------------------------*/
+
+
+/*----------------------------------------Login Page-------------------------------------*/
+
+
+.mar-row > * {
+  margin-top:15px;
+} 
+
+.show-eye{
+  padding: 5px;
+  cursor: pointer;
+}
+.highlight-eye{
+  color: var(--themeColorDark);
+}
+
+.password-eye{
+  position: absolute;
+  right: 10px;
+ top: 0;
+}
+
+/*----------------------------------------Login Page End-------------------------------------*/
+
+
+/*----------------------------------------Password Change Page-------------------------------------*/
+
+
+.current-password-eye{
+  position: absolute;
+  right: 10px;
+}
+
+.new-password-eye{
+  position: absolute;
+  right: 10px;
+  top: 80px;
+}
+
+.retype-password-eye{
+  position: absolute;
+  right: 10px;
+  top: 150px;
+}
+
+/*----------------------------------------Password Change Page End-------------------------------------*/
+
+
+
+/*----------------------------------------Roll Series-------------------------------------*/
+
+ .custom_rollseries_card{
+        margin-top: 100px !important;    
+      }
+
+.studentButton{
+    background-color: var(--themeColorDark) !important;
+    color: #FFFFFF !important;
+    border:0 !important;
+}
+.studentButton:active{
+    background-color: var(--themeColorDark) !important;
+    color: #FFFFFF !important;
+    border:0 !important;
+}
+
+.custom-select2{
+    border: 2px solid var(--themeColorDark) !important;
+    border-radius: 5px;
+    padding:0 !important;
+}
+
+.custom-select2 option{
+    padding-left:10px;
+   padding-top:5px;
+  padding-bottom:5px;
+}
+.custom-select2 option:hover{
+    background-color: var(--themeColorDark);
+    color: #FFFFFF;
+}
+
+
+/*----------------------------------------Roll Series End-------------------------------------*/
+
+
+
+/*----------------------------------------Student Attendance-------------------------------------*/
+
+
+  .table {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .current-date {
+      color: var(--themeColorDark);
+      font-weight: 500;
+      font-size: 16px;
+  }
+  .calender-table{
+    margin-bottom: 0 !important;
+  }
+.calender-table th, .calender-table td {
+    text-align: center;
+    width: 12.5%;
+    vertical-align: middle;
+}
+.table td:hover, .arrow-btn:hover {
+    cursor: pointer;
+}
+
+.v-align{
+  vertical-align: middle;
+}
+
+.modal-header .close{
+  color: #000 !important;
+  margin: 0 !important;
+}
+
+.no-data-tr{
+  border: 0 !important;
+  border-radius: 4px; 
+}
+.no-data{
+  text-align: center;
+  border: 0 !important;
+  background: linear-gradient(60deg,var(--themeColorLight) ,var(--themeColorDark)) !important;
+  color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 4px 20px 0 rgba(0,0,0,.14),0 7px 10px -5px rgba(156,39,176,.4) !important;
+}
+
+
+.m-head{
+  border-bottom: 2px solid var(--themeColorDark) !important;
+}
+
+
+.modal-open {
+    overflow: hidden !important;
+}
+
+
+
+/*----------------------------------------Student Attendance End-------------------------------------*/
+
+
+/*----------------------------------------TimeTable -------------------------------------*/
+
+
+ .custom_timetable > tbody > tr > th, .custom_timetable > tfoot > tr > th, .custom_timetable > thead > tr > td, .custom_timetable > tbody > tr > td, .custom_timetable > tfoot > tr > td{
+  border-color: var(--themeColorDark) !important;
+  cursor: pointer;
+ }
+
+ .custom_timetable > thead > tr > th, .custom_timetable > tbody > tr > th, .custom_timetable > tfoot > tr > th, .custom_timetable > thead > tr > td, .custom_timetable > tbody > tr > td, .custom_timetable > tfoot > tr > td{
+  border-top: 1px solid var(--themeColorDark) !important;
+  border-color: var(--themeColorDark) !important;
+
+ }
+
+ .custom_timetable > thead > tr > th, .custom_timetable > tbody > tr > th, .custom_timetable > tfoot > tr > th, .custom_timetable > thead > tr > td, .custom_timetable > tbody > tr > td, .custom_timetable > tfoot > tr > td{
+  width: 14.2857% !important;
+ }
+
+
+.tableHead{
+  background-color:var(--themeColorDark) !important;
+  color:#FFFFFF !important;
+  font-weight:bolder !important;
+}
+
+ @media screen and (max-width: 768px) {
+  .modal-dialog {
+    min-width: 300px !important;
+  }
+}
+
+.btn-group .active{
+  background-color: var(--themeColorDark) !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+}
+
+.btn-group .active:hover{
+  background-color: var(--themeColorDark) !important; 
+  color: #FFFFFF !important;
+}
+
+.lectureA{
+    border:2px solid var(--themeColorDark) !important;
+}
+
+.toggle-section:not(:disabled):not(.disabled):active, .toggle-section:not(:disabled):not(.disabled).active{
+  border: 2px solid var(--themeColorDark) !important;
+}
+
+.lectureA:not(:disabled):not(.disabled):active, .lectureA:not(:disabled):not(.disabled).active{
+  border: 2px solid var(--themeColorDark) !important;
+
+}
+
+.dayA:not(:disabled):not(.disabled):active, .dayA:not(:disabled):not(.disabled).active{
+  border: 2px solid var(--themeColorDark) !important;   
+
+}
+
+
+.btn-group .toggle-section{
+  border: 2px solid var(--themeColorDark) !important;
+}
+.btn-group .toggle-section:hover{
+  box-shadow: none !important;
+
+}
+
+.btn-group .lectureA{
+  box-shadow: none !important;
+  border: 2px solid var(--themeColorDark);
+
+}
+.btn-group .lectureA:hover{
+  box-shadow: none !important;
+  border: 2px solid var(--themeColorDark) !important;
+}
+
+.btn-group .dayA{
+  box-shadow: none !important;
+  border: 2px solid var(--themeColorDark) !important;
+}
+.btn-group .dayA:hover{
+  box-shadow: none !important;
+
+}
+
+.customWidth{
+  min-width:125px !important;
+  border: 2px solid var(--themeColorDark) !important;
+  border-left: 0 !important;
+  border-right: 0 !important; 
+}
+.customWidth:hover {
+  border-left: 0 !important;
+  border-right: 0 !important; 
+}
+
+.btn-group .customWidth:active{
+  border-left: 0 !important;
+  border-right: 0 !important;
+  background-color: #f2f2f2 !important;
+  color: #000000 !important;
+}
+
+.copy-btn{
+  background-color: #18ba00 !important;
+}
+.form-group .copy-btn:active{
+  background-color: #18ba00 !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+}
+
+.form-group .save-btn:active{
+  background-color: var(--themeColorDark) !important;
+  color: #FFFFFF !important;
+  border: 0 !important;
+}
+
+.custom_modal_header{
+    padding: 0 !important;
+}
+
+.custom_modal_title{
+    padding: 1rem;
+}
+
+/*----------------------------------------Timetable End-------------------------------------*/
+
+
+/*----------------------------------------Custom buttons -------------------------------------*/
+
+.custom_add_form .add_submit_button:active, .mar-row .changePasswordButton:active, .attendanceForm .attendanceSubmit:active, .mar-row .loginButton:active, .form-group .custom-search-button:active{
+    background-color: var(--themeColorDark) !important;
+    border:0 !important;
+    color: #FFFFFF !important;
+}
+
+.input-group .customSearchButton:active{
+    background-color: #FFFFFF !important;
+    border:0 !important;
+}
+
+.view-chart-button:hover{
+  background-color: var(--themeColorLight) !important;
+}
+.card-header .custom-chart-button:active{
+  background-color: var(--themeColorLight) !important;
+  color:#FFFFFF !important;
+}
+
+
+/*----------------------------------------Custom buttons End-------------------------------------*/
+
+/*----------------------------------------View Attendance -------------------------------------*/
+
+  body.modal-open {
+                overflow: hidden;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+            }
+            
+            .atten-table {
+                margin-bottom: 0;
+                text-align: center;
+            }
+            
+            .current-date {
+                color: var(--themeColorDark);
+                font-weight: 500;
+                font-size: 16px;
+            }
+            
+            .calender-table th,
+            .calender-table td {
+                text-align: center;
+                width: 12.5%;
+                vertical-align: middle;
+            }
+            
+            .atten-table td:hover,
+            .arrow-btn:hover {
+                background-color: #f1f1f1;
+                cursor: pointer;
+            }
+            
+            .nav-tabs .nav-item .nav-link,
+            .nav-tabs .nav-item .nav-link:hover,
+            .nav-tabs .nav-item .nav-link:focus {
+                color: #000000 !important;
+            }
+            
+            .v-align {
+                vertical-align: middle;
+            }
+            
+  
+            
+            .no-data-tr {
+                border: 0 !important;
+                border-radius: 4px;
+            }
+            
+            .no-data {
+                text-align: center;
+                border: 0 !important;
+                background: linear-gradient(60deg, var(--themeColorLight), var(--themeColorDark)) !important;
+                color: #FFFFFF;
+                border-radius: 4px;
+                box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(156, 39, 176, .4) !important;
+            }
+            
+            .m-head {
+                border-bottom: 2px solid var(--themeColorDark) !important;
+            }
+            
+            .cal-td {
+                /* border: 1px solid #8e24aa !important; */
+                text-align: center;
+                width: 14.2857%;
+            }
+            
+            .cal-td:hover {
+                background-color: transparent !important;
+                cursor: pointer;
+            }
+            
+            .cal-hover:hover {
+                background: linear-gradient(60deg, var(--themeColorLight), var(--themeColorDark)) !important;
+                color: #fff;
+                transition: all .2s;
+            }
+            
+            .nav-tabs .active-link-toggle1 .active-link-toggle2,
+            .nav-tabs .active-link-toggle1 .active-link-toggle2:hover,
+            .nav-tabs .active-link-toggle1 .active-link-toggle2:focus {
+                background: linear-gradient(60deg, var(--themeColorLight), var(--themeColorDark)) !important;
+                color: #FFFFFF !important;
+                box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px var(--themeColorShadow);
+            }
+            
+            .atten-table > thead > tr > th,
+            .atten-table > tbody > tr > th,
+            .atten-table > thead > tr > td,
+            .atten-table > tbody > tr > td,
+            .atten-table > tfoot > tr > td {
+                border: 1px solid var(--themeColorDark) !important;
+            }
+            
+            .atten-table > tbody > tr > th:hover,
+            .atten-table > tbody > tr > td:hover {
+                background-color: transparent !important;
+            }
+            
+            .card .atten-table tr:first-child td {
+                border-top: 1px solid var(--themeColorDark) !important;
+            }
+            
+            .modal-open {
+                overflow: hidden !important ;
+            }
+            
+            .lectures-table th {
+                font-size: 14px !important;
+                font-weight: 500 !important;
+            }
+            
+            .lectures-table td {
+                font-size: 14px !important;
+            }
+
+
+/*----------------------------------------View Attendance End -------------------------------------*/
+
+
+.customSearchButton i:active{
+  background-color: #FFFFFF !important;
+  border: 0 !important;
+}
+
+
+/*----------------------------------------MediaQueries-------------------------------------*/
+
+@media only screen and (max-width: 768px){
+  .rotate-90{
+    transform: rotate(90deg);
+  }
+  .rotate-270{
+    transform: rotate(-90deg);
+  }
+  .w-md-50{
+  width: 49% !important;
+}
+}
+
+
+
+
+/*----------------------------------------MediaQueries End-------------------------------------*/
+
+
+/*---------------------------------------------Report------------------------------------------*/
+
+.custom-datepicker{
+  background: #fff !important;
+  cursor: pointer !important;
+  padding: 8px 10px !important;
+  border: 1px solid var(--themeColorDark) !important;
+  width: 100% !important;
+}
+/*--------------------------------------------Report End---------------------------------------*/
+

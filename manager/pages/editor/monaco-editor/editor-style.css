@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../../fonts/roboto.woff") format("woff");
+}
+
+:root {
+  --primary-color: #4285f4;
+  --primary-color-hover: #1e6ef2;
+  --border-color: #1e6ef2;
+  --border-radius: 0.125rem;
+  --font-family: "Roboto";
+}
+
+body, html {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    font-family: Roboto;
+}
+
+#editor {
+    height: 100vh;
+}
+
+
+.notification-container {
+    position: absolute;
+    background: #fff;
+    z-index: 7;
+    bottom: 20px;
+    right: 30px;
+    width: 250px;
+    transform: scale(0.8);
+    transition-property: transform, opacity;
+    transition-duration: 400ms;
+    opacity: 0;
+}
+
+.notification {
+    background-color: #fff;
+    padding: 15px 25px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    border: 1px solid rgba(34, 36, 38, 0.2);
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+}
+
+.notification::after {
+    position: absolute;
+    left: 90%;
+    top: 35%;
+    content: 'close';
+    font-family: Material Icons;
+    transition: color 0.15s;
+    cursor: pointer;
+}
+
+.notification:hover::after {
+    color: #555;
+}
+
+.fade {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.btn {
+  border-radius: var(--border-radius);
+  padding: 8px 16px;
+  transition: 0.2s background, 0.2s border;
+  min-width: 70px;
+  border: 1px solid transparent;
+  height: 35px;
+  background-color: #ddd;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.btn:disabled {
+  cursor: not-allowed;
+}
+.btn-primary {
+  border: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: var(--primary-color-hover);
+  border: var(--border-color);
+}
