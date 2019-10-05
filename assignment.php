@@ -454,7 +454,6 @@ include("./loader.php");
                         department: "<?php echo $teacherData['department'] ?>"
                     },
                     success: function(response) {
-                        // console.log(response)
                         $("#subject").html(response);
                         $('.selectpicker').selectpicker('refresh');
                     }
