@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.7.9
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Oct 04, 2019 at 11:45 AM
+- Server version: 10.1.31-MariaDB
+- PHP Version: 7.2.3
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="https://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="gndpc_attendance" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="cse_timetable">
+                CREATE TABLE `cse_timetable` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `semester` int(11) NOT NULL,
+                  `day` varchar(30) NOT NULL,
+                  `section` varchar(20) NOT NULL,
+                  `lecture_1` text NOT NULL,
+                  `lecture_2` text NOT NULL,
+                  `lecture_3` text NOT NULL,
+                  `lecture_4` text NOT NULL,
+                  `lecture_5` text NOT NULL,
+                  `lecture_6` text NOT NULL,
+                  `lecture_7` text NOT NULL,
+                  `lecture_8` text NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'gndpc_attendance'
+    -->
+    <database name="gndpc_attendance">
+        <!-- Table cse_timetable -->
+        <table name="cse_timetable">
+            <column name="id">1</column>
+            <column name="semester">6</column>
+            <column name="day">monday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">6218:aman3580</column>
+            <column name="lecture_2">6200:sonia3943</column>
+            <column name="lecture_3">6287:sanje8592</column>
+            <column name="lecture_4">6287:sanje8592</column>
+            <column name="lecture_5">6210:prabh6412</column>
+            <column name="lecture_6">3000:harde8951</column>
+            <column name="lecture_7">3000:harde8951</column>
+            <column name="lecture_8">9999:sanje8592</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">2</column>
+            <column name="semester">6</column>
+            <column name="day">monday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">6218:aman3580</column>
+            <column name="lecture_2">6200:sonia3943</column>
+            <column name="lecture_3">3000:harde8951</column>
+            <column name="lecture_4">3000:harde8951</column>
+            <column name="lecture_5">6210:prabh6412</column>
+            <column name="lecture_6">6248:aman3580</column>
+            <column name="lecture_7">6248:aman3580</column>
+            <column name="lecture_8">9999:sanje8592</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">3</column>
+            <column name="semester">6</column>
+            <column name="day">tuesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">6217:sanje8592</column>
+            <column name="lecture_2">6210:prabh6412</column>
+            <column name="lecture_3">3000:harde8951</column>
+            <column name="lecture_4">3000:harde8951</column>
+            <column name="lecture_5">6200:sonia3943</column>
+            <column name="lecture_6">6230:sonia3943</column>
+            <column name="lecture_7">6230:sonia3943</column>
+            <column name="lecture_8">9999:sanje8592</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">4</column>
+            <column name="semester">6</column>
+            <column name="day">tuesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">6217:sanje8592</column>
+            <column name="lecture_2">6210:prabh6412</column>
+            <column name="lecture_3">6287:sanje8592</column>
+            <column name="lecture_4">6287:sanje8592</column>
+            <column name="lecture_5">6200:sonia3943</column>
+            <column name="lecture_6">6248:aman3580</column>
+            <column name="lecture_7">6248:aman3580</column>
+            <column name="lecture_8">9999:sanje8592</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">5</column>
+            <column name="semester">6</column>
+            <column name="day">wednesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">6218:aman3580</column>
+            <column name="lecture_2">6666:harde8951</column>
+            <column name="lecture_3">6230:sonia3943</column>
+            <column name="lecture_4">6230:sonia3943</column>
+            <column name="lecture_5">6217:sanje8592</column>
+            <column name="lecture_6">6248:aman3580</column>
+            <column name="lecture_7">6248:aman3580</column>
+            <column name="lecture_8">9999:sanje8592</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">6</column>
+            <column name="semester">6</column>
+            <column name="day">wednesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">6218:aman3580</column>
+            <column name="lecture_2">6666:harde8951</column>
+            <column name="lecture_3">3000:harde8951</column>
+            <column name="lecture_4">3000:harde8951</column>
+            <column name="lecture_5">6217:sanje8592</column>
+            <column name="lecture_6">3000:prabh6412</column>
+            <column name="lecture_7">3000:prabh6412</column>
+            <column name="lecture_8">9999:sanje8592</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">7</column>
+            <column name="semester">6</column>
+            <column name="day">thursday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">6210:prabh6412</column>
+            <column name="lecture_2">6200:sonia3943</column>
+            <column name="lecture_3">3000:harde8951</column>
+            <column name="lecture_4">3000:harde8951</column>
+            <column name="lecture_5">6666:harde8951</column>
+            <column name="lecture_6">6248:aman3580</column>
+            <column name="lecture_7">6248:aman3580</column>
+            <column name="lecture_8">9999:sanje8592</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">8</column>
+            <column name="semester">6</column>
+            <column name="day">thursday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">6210:prabh6412</column>
+            <column name="lecture_2">6200:sonia3943</column>
+            <column name="lecture_3">6287:sanje8592</column>
+            <column name="lecture_4">6287:sanje8592</column>
+            <column name="lecture_5">6666:harde8951</column>
+            <column name="lecture_6">6230:sonia3943</column>
+            <column name="lecture_7">6230:sonia3943</column>
+            <column name="lecture_8">9999:sanje8592</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">9</column>
+            <column name="semester">6</column>
+            <column name="day">friday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">6217:sanje8592</column>
+            <column name="lecture_2">6666:harde8951</column>
+            <column name="lecture_3">6287:sanje8592</column>
+            <column name="lecture_4">6287:sanje8592</column>
+            <column name="lecture_5">6218:aman3580</column>
+            <column name="lecture_6">3000:harde8951,harpr5369</column>
+            <column name="lecture_7">3000:harde8951,harpr5369</column>
+            <column name="lecture_8">9999:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">10</column>
+            <column name="semester">6</column>
+            <column name="day">friday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">6217:sanje8592</column>
+            <column name="lecture_2">6666:harde8951</column>
+            <column name="lecture_3">3000:prabh6412</column>
+            <column name="lecture_4">3000:prabh6412</column>
+            <column name="lecture_5">6218:aman3580</column>
+            <column name="lecture_6">6230:sonia3943</column>
+            <column name="lecture_7">6230:sonia3943</column>
+            <column name="lecture_8">9999:sanje8592</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">11</column>
+            <column name="semester">4</column>
+            <column name="day">monday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">622:sanje8592</column>
+            <column name="lecture_2">628:prabh6412</column>
+            <column name="lecture_3">624:harpr3773</column>
+            <column name="lecture_4">623:harpr5369</column>
+            <column name="lecture_5">564:aman3580</column>
+            <column name="lecture_6">2628:prabh6412</column>
+            <column name="lecture_7">2628:prabh6412</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">12</column>
+            <column name="semester">4</column>
+            <column name="day">monday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">622:sanje8592</column>
+            <column name="lecture_2">628:prabh6412</column>
+            <column name="lecture_3">624:harpr3773</column>
+            <column name="lecture_4">623:harpr5369</column>
+            <column name="lecture_5">564:aman3580</column>
+            <column name="lecture_6">2624:harpr3773</column>
+            <column name="lecture_7">2624:harpr3773</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">13</column>
+            <column name="semester">4</column>
+            <column name="day">tuesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">3621:harpr5369</column>
+            <column name="lecture_2">564:aman3580</column>
+            <column name="lecture_3">2624:harpr3773</column>
+            <column name="lecture_4">2624:harpr3773</column>
+            <column name="lecture_5">628:prabh6412</column>
+            <column name="lecture_6">2622:sanje8592</column>
+            <column name="lecture_7">2622:sanje8592</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">14</column>
+            <column name="semester">4</column>
+            <column name="day">tuesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">3621:harpr5369</column>
+            <column name="lecture_2">564:aman3580</column>
+            <column name="lecture_3">2623:harpr5369</column>
+            <column name="lecture_4">2623:harpr5369</column>
+            <column name="lecture_5">628:prabh6412</column>
+            <column name="lecture_6">2628:prabh6412</column>
+            <column name="lecture_7">2628:prabh6412</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">15</column>
+            <column name="semester">4</column>
+            <column name="day">wednesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">3621:harpr5369</column>
+            <column name="lecture_2">622:sanje8592</column>
+            <column name="lecture_3">2623:harpr5369</column>
+            <column name="lecture_4">2623:harpr5369</column>
+            <column name="lecture_5">623:harpr5369</column>
+            <column name="lecture_6">2624:harpr3773</column>
+            <column name="lecture_7">2624:harpr3773</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">16</column>
+            <column name="semester">4</column>
+            <column name="day">wednesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">3621:harpr5369</column>
+            <column name="lecture_2">622:sanje8592</column>
+            <column name="lecture_3">2624:harpr3773</column>
+            <column name="lecture_4">2624:harpr3773</column>
+            <column name="lecture_5">623:harpr5369</column>
+            <column name="lecture_6">2622:sanje8592</column>
+            <column name="lecture_7">2622:sanje8592</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">17</column>
+            <column name="semester">4</column>
+            <column name="day">thursday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">2623:harpr5369</column>
+            <column name="lecture_2">2623:harpr5369</column>
+            <column name="lecture_3">2628:prabh6412</column>
+            <column name="lecture_4">2628:prabh6412</column>
+            <column name="lecture_5">624:harpr3773</column>
+            <column name="lecture_6">622:sanje8592</column>
+            <column name="lecture_7">3621:harpr5369</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">18</column>
+            <column name="semester">4</column>
+            <column name="day">thursday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">2622:sanje8592</column>
+            <column name="lecture_2">2622:sanje8592</column>
+            <column name="lecture_3">2623:harpr5369</column>
+            <column name="lecture_4">2623:harpr5369</column>
+            <column name="lecture_5">624:harpr3773</column>
+            <column name="lecture_6">622:sanje8592</column>
+            <column name="lecture_7">3621:harpr5369</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">19</column>
+            <column name="semester">4</column>
+            <column name="day">friday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">628:prabh6412</column>
+            <column name="lecture_2">3621:harpr5369</column>
+            <column name="lecture_3">564:aman3580</column>
+            <column name="lecture_4">624:harpr3773</column>
+            <column name="lecture_5">623:harpr5369</column>
+            <column name="lecture_6">2622:sanje8592</column>
+            <column name="lecture_7">2622:sanje8592</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">20</column>
+            <column name="semester">4</column>
+            <column name="day">friday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">628:prabh6412</column>
+            <column name="lecture_2">3621:harpr5369</column>
+            <column name="lecture_3">564:aman3580</column>
+            <column name="lecture_4">624:harpr3773</column>
+            <column name="lecture_5">623:harpr5369</column>
+            <column name="lecture_6">2628:prabh6412</column>
+            <column name="lecture_7">2628:prabh6412</column>
+            <column name="lecture_8">9999:harpr5369,prabh6412</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">21</column>
+            <column name="semester">2</column>
+            <column name="day">monday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">2853:harpr3773</column>
+            <column name="lecture_2">453:sarab6845</column>
+            <column name="lecture_3">6062:aman3580</column>
+            <column name="lecture_4">6062:aman3580</column>
+            <column name="lecture_5">2753:jaspa8301</column>
+            <column name="lecture_6">553:chara3712</column>
+            <column name="lecture_7">190:sonia3943</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">22</column>
+            <column name="semester">2</column>
+            <column name="day">monday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">2853:harpr3773</column>
+            <column name="lecture_2">453:sarab6845</column>
+            <column name="lecture_3">6453:sarab6845</column>
+            <column name="lecture_4">6453:sarab6845</column>
+            <column name="lecture_5">2753:jaspa8301</column>
+            <column name="lecture_6">553:chara3712</column>
+            <column name="lecture_7">190:sonia3943</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">23</column>
+            <column name="semester">2</column>
+            <column name="day">tuesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">190:sonia3943</column>
+            <column name="lecture_2">2853:harpr3773</column>
+            <column name="lecture_3">190:sonia3943</column>
+            <column name="lecture_4">553:chara3712</column>
+            <column name="lecture_5">6962:harpr5369</column>
+            <column name="lecture_6">6962:harpr5369</column>
+            <column name="lecture_7">6962:harpr5369</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">24</column>
+            <column name="semester">2</column>
+            <column name="day">tuesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">190:sonia3943</column>
+            <column name="lecture_2">2853:harpr3773</column>
+            <column name="lecture_3">190:sonia3943</column>
+            <column name="lecture_4">553:chara3712</column>
+            <column name="lecture_5">6062:harpr3773</column>
+            <column name="lecture_6">6062:harpr3773</column>
+            <column name="lecture_7">6062:harpr3773</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">25</column>
+            <column name="semester">2</column>
+            <column name="day">wednesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">5753:jaspa8301</column>
+            <column name="lecture_2">5753:jaspa8301</column>
+            <column name="lecture_3">453:sarab6845</column>
+            <column name="lecture_4">553:chara3712</column>
+            <column name="lecture_5">2853:harpr3773</column>
+            <column name="lecture_6">190:sonia3943</column>
+            <column name="lecture_7">190:sonia3943</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">26</column>
+            <column name="semester">2</column>
+            <column name="day">wednesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">2190:sonia3943</column>
+            <column name="lecture_2">2190:sonia3943</column>
+            <column name="lecture_3">453:sarab6845</column>
+            <column name="lecture_4">553:chara3712</column>
+            <column name="lecture_5">2853:harpr3773</column>
+            <column name="lecture_6">190:sonia3943</column>
+            <column name="lecture_7">190:sonia3943</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">27</column>
+            <column name="semester">2</column>
+            <column name="day">thursday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">6062:aman3580</column>
+            <column name="lecture_2">6062:aman3580</column>
+            <column name="lecture_3">6062:aman3580</column>
+            <column name="lecture_4">6062:aman3580</column>
+            <column name="lecture_5">190:sonia3943</column>
+            <column name="lecture_6">553:chara3712</column>
+            <column name="lecture_7">2753:sukhd8732</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">28</column>
+            <column name="semester">2</column>
+            <column name="day">thursday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">6962:harpr3773</column>
+            <column name="lecture_2">6962:harpr3773</column>
+            <column name="lecture_3">6962:harpr3773</column>
+            <column name="lecture_4">6962:harpr3773</column>
+            <column name="lecture_5">190:sonia3943</column>
+            <column name="lecture_6">553:chara3712</column>
+            <column name="lecture_7">2753:sukhd8732</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">29</column>
+            <column name="semester">2</column>
+            <column name="day">friday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">2190:sonia3943</column>
+            <column name="lecture_2">2190:sonia3943</column>
+            <column name="lecture_3">553:chara3712</column>
+            <column name="lecture_4">2753:sukhd8732</column>
+            <column name="lecture_5">453:sarab6845</column>
+            <column name="lecture_6">6453:sarab6845</column>
+            <column name="lecture_7">6453:sarab6845</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">30</column>
+            <column name="semester">2</column>
+            <column name="day">friday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">6062:harpr3773</column>
+            <column name="lecture_2">6062:harpr3773</column>
+            <column name="lecture_3">553:chara3712</column>
+            <column name="lecture_4">2753:sukhd8732</column>
+            <column name="lecture_5">453:sarab6845</column>
+            <column name="lecture_6">5753:jaspa8301</column>
+            <column name="lecture_7">5753:jaspa8301</column>
+            <column name="lecture_8">9999:harji6837,harpr3773</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">31</column>
+            <column name="semester">5</column>
+            <column name="day">monday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">32</column>
+            <column name="semester">5</column>
+            <column name="day">monday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">33</column>
+            <column name="semester">5</column>
+            <column name="day">tuesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">34</column>
+            <column name="semester">5</column>
+            <column name="day">tuesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">35</column>
+            <column name="semester">5</column>
+            <column name="day">wednesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">36</column>
+            <column name="semester">5</column>
+            <column name="day">wednesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">37</column>
+            <column name="semester">5</column>
+            <column name="day">thursday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">38</column>
+            <column name="semester">5</column>
+            <column name="day">thursday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">39</column>
+            <column name="semester">5</column>
+            <column name="day">friday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">40</column>
+            <column name="semester">5</column>
+            <column name="day">friday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1120:harpr5369</column>
+            <column name="lecture_2">1120:harpr5369</column>
+            <column name="lecture_3">1120:harpr5369</column>
+            <column name="lecture_4">1120:harpr5369</column>
+            <column name="lecture_5">1120:harpr5369</column>
+            <column name="lecture_6">1120:harpr5369</column>
+            <column name="lecture_7">1120:harpr5369</column>
+            <column name="lecture_8">1120:harpr5369</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">41</column>
+            <column name="semester">3</column>
+            <column name="day">monday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">42</column>
+            <column name="semester">3</column>
+            <column name="day">monday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">43</column>
+            <column name="semester">3</column>
+            <column name="day">tuesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">44</column>
+            <column name="semester">3</column>
+            <column name="day">tuesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">45</column>
+            <column name="semester">3</column>
+            <column name="day">wednesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">46</column>
+            <column name="semester">3</column>
+            <column name="day">wednesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">47</column>
+            <column name="semester">3</column>
+            <column name="day">thursday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">48</column>
+            <column name="semester">3</column>
+            <column name="day">thursday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">49</column>
+            <column name="semester">3</column>
+            <column name="day">friday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">50</column>
+            <column name="semester">3</column>
+            <column name="day">friday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">1115:aman3580</column>
+            <column name="lecture_2">1115:aman3580</column>
+            <column name="lecture_3">1115:aman3580</column>
+            <column name="lecture_4">1115:aman3580</column>
+            <column name="lecture_5">1115:aman3580</column>
+            <column name="lecture_6">1115:aman3580</column>
+            <column name="lecture_7">1115:aman3580</column>
+            <column name="lecture_8">1115:aman3580</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">51</column>
+            <column name="semester">1</column>
+            <column name="day">monday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">52</column>
+            <column name="semester">1</column>
+            <column name="day">monday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">53</column>
+            <column name="semester">1</column>
+            <column name="day">tuesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">54</column>
+            <column name="semester">1</column>
+            <column name="day">tuesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">55</column>
+            <column name="semester">1</column>
+            <column name="day">wednesday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">56</column>
+            <column name="semester">1</column>
+            <column name="day">wednesday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">57</column>
+            <column name="semester">1</column>
+            <column name="day">thursday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">58</column>
+            <column name="semester">1</column>
+            <column name="day">thursday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">59</column>
+            <column name="semester">1</column>
+            <column name="day">friday</column>
+            <column name="section">L</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+        <table name="cse_timetable">
+            <column name="id">60</column>
+            <column name="semester">1</column>
+            <column name="day">friday</column>
+            <column name="section">M</column>
+            <column name="lecture_1">5752:sukhd8732</column>
+            <column name="lecture_2">5752:sukhd8732</column>
+            <column name="lecture_3">5752:sukhd8732</column>
+            <column name="lecture_4">5752:sukhd8732</column>
+            <column name="lecture_5">5752:sukhd8732</column>
+            <column name="lecture_6">5752:sukhd8732</column>
+            <column name="lecture_7">5752:sukhd8732</column>
+            <column name="lecture_8">5752:sukhd8732</column>
+        </table>
+    </database>
+</pma_xml_export>
